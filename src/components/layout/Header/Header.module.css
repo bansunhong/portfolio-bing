@@ -12,7 +12,7 @@
 .header.active .headerBottom {border-bottom:1px solid #e0e0e0;}
 
 .hamburgerBtn {}
-.hamburgerBtn .icon {font-size:24px;}
+.hamburgerBtn .icon {font-size:24px; color:#000;}
 
 @media screen and (max-width: 1700px) {
   .header .headerBottom {padding:40px 20px;}
