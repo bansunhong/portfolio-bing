@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// 공통 레이아웃
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer/Footer";
+
+// 페이지
+import MainPage from "./pages/MainPage";
+
+export default function App() {
+    return (
+        <>
+            {/* 공통 Header */}
+            <Header />
+
+            {/* 페이지 라우팅 */}
+            <Routes>
+                <Route path="/" element={<MainPage />} />
+            </Routes>
+
+            {/* 공통 Footer */}
+            <Footer />
+        </>
+    );
 }
-
-export default App;

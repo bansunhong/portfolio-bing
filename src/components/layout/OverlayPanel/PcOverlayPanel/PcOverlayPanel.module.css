@@ -1,0 +1,9 @@
+.pcOverlay {position:fixed; inset:0; background: rgba(0,0,0,0.8); display:flex; justify-content: center; align-items: center; z-index:999;}
+.pcContent {width:100%; height:100%; overflow-y:auto; background:#fff; padding:60px; border-radius: 10px;}
+.pcContent ul {text-align:center;}
+
+
+@media screen and (max-width: 1700px) {}
+@media screen and (max-width: 1400px) {}
+@media (max-width: 1024px) {}
+@media screen and (max-width: 768px) {}

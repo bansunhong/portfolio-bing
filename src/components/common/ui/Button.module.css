@@ -1,0 +1,61 @@
+.button {
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 21px;
+    text-align: center;
+}
+
+/* Variant */
+.primary {
+    background: linear-gradient(to top, #ed1c24, #e0462e);
+    color: #fff;
+    font-weight: 500;
+}
+
+.secondary {
+    border: 1px solid #dfdfdf;
+    background: #fff;
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+    color: #000;
+}
+
+.secondary:hover {
+    background: linear-gradient(to top, #ed1c24, #e0462e);
+    color: #fff;
+}
+
+/* Size */
+.sm {
+    width: 120px;
+    height: 37px;
+    line-height: 37px;
+}
+
+.md {
+    width: 160px;
+    height: 43px;
+    line-height: 43px;
+    font-size: 14px;
+}
+
+.lg {
+    width: 180px;
+    height: 55px;
+    line-height: 55px;
+}
+
+/* State */
+.fullWidth {
+    width: 100%;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.loading {
+    pointer-events: none;
+}
