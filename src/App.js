@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // 공통 레이아웃
 import Header from "./components/layout/Header";
@@ -10,19 +10,17 @@ import MainPage from "./pages/MainPage";
 
 export default function App() {
     return (
-        <>
+        <Router>
             {/* 공통 Header */}
             <Header />
 
             {/* 페이지 라우팅 */}
-            <Routes>
-                <Route path="/" element={<MainPage />} />
-                {/* 다른 페이지 라우팅 예시 */}
-                {/* <Route path="/about" element={<AboutPage />} /> */}
-            </Routes>
+            <Switch>
+                <Route exact path="/" component={MainPage} />
+            </Switch>
 
             {/* 공통 Footer */}
             <Footer />
-        </>
+        </Router>
     );
 }
