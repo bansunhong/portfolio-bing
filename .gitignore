@@ -30,3 +30,6 @@ history/
 node_modules/
 build/
 .vscode/
+
+# VSCode Local History
+.history/

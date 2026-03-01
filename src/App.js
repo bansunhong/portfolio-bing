@@ -17,6 +17,8 @@ export default function App() {
             {/* 페이지 라우팅 */}
             <Routes>
                 <Route path="/" element={<MainPage />} />
+                {/* 다른 페이지 라우팅 예시 */}
+                {/* <Route path="/about" element={<AboutPage />} /> */}
             </Routes>
 
             {/* 공통 Footer */}
