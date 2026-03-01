@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-bing/static/css/main.bde45a4e.css",
-    "main.js": "/portfolio-bing/static/js/main.e55d86fa.js",
+    "main.js": "/portfolio-bing/static/js/main.f3c1bc9d.js",
     "static/media/pc_section01_4_ver6.png": "/portfolio-bing/static/media/pc_section01_4_ver6.848a4d18abc24e8001b7.png",
     "static/media/Pretendard-Bold.woff2": "/portfolio-bing/static/media/Pretendard-Bold.1f2cdf3634e962b069c8.woff2",
     "static/media/Pretendard-Medium.woff2": "/portfolio-bing/static/media/Pretendard-Medium.77ceeaceb5ed439e294b.woff2",
@@ -15,10 +15,10 @@
     "static/media/slick.woff": "/portfolio-bing/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/portfolio-bing/index.html",
     "main.bde45a4e.css.map": "/portfolio-bing/static/css/main.bde45a4e.css.map",
-    "main.e55d86fa.js.map": "/portfolio-bing/static/js/main.e55d86fa.js.map"
+    "main.f3c1bc9d.js.map": "/portfolio-bing/static/js/main.f3c1bc9d.js.map"
   },
   "entrypoints": [
     "static/css/main.bde45a4e.css",
-    "static/js/main.e55d86fa.js"
+    "static/js/main.f3c1bc9d.js"
   ]
 }
