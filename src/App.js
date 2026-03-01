@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 // 공통 레이아웃
 import Header from "./components/layout/Header";
@@ -10,19 +10,17 @@ import MainPage from "./pages/MainPage";
 
 export default function App() {
     return (
-        <HashRouter>
+        <>
             {/* 공통 Header */}
             <Header />
 
             {/* 페이지 라우팅 */}
             <Routes>
                 <Route path="/" element={<MainPage />} />
-                {/* 다른 페이지 라우팅 예시 */}
-                {/* <Route path="/about" element={<AboutPage />} /> */}
             </Routes>
 
             {/* 공통 Footer */}
             <Footer />
-        </HashRouter>
+        </>
     );
 }
