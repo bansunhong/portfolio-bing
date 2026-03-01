@@ -126,6 +126,8 @@
 .sliderItem span {
   opacity: 1;
   margin-top: 10px;
+  height: 43px;
+  line-height: 43px;
 }
 .sliderProductLink {
   position: relative;
@@ -219,6 +221,9 @@
   }
 }
 @media (max-width: 768px) {
+  .mainSection1 {
+    margin-bottom: 0;
+  }
   .sectionTitle {
     font-size: 22px;
     margin-bottom: 20px;
@@ -245,12 +250,12 @@
   .mainSection2 :global(.slick-track) {
     display: block;
   }
-  .mainSection2 :global(.slick-slide) {
+  .mainSection2 :global(.slick-initialized) :global(.slick-slide) {
     display: flex;
     flex-direction: column;
     gap: 14px;
   }
-  .mainSection2 :global(.slick-slide) > div {
+  .mainSection2 :global(.slick-initialized) :global(.slick-slide) > div {
     display: flex;
     gap: 8px;
   }

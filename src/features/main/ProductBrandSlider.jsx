@@ -25,6 +25,7 @@ import brandImg06 from "../../assets/img/img_brand_06.png";
 export default function ProductBrandSlider() {
     /* 모바일 체크 */
     const [isMobile, setIsMobile] = useState(false);
+
     useEffect(() => {
         const checkMobile = () => setIsMobile(window.innerWidth <= 768);
         checkMobile();
@@ -119,78 +120,56 @@ export default function ProductBrandSlider() {
     }, []);
 
     /* 슬라이더 설정 */
-    const productSettings = {
-        dots: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        arrows: true,
-        rows: 1,
-        slidesPerRow: 1,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    dots: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    rows: 2,
-                    slidesPerRow: 3,
-                    arrows: false,
-                    infinite: false,
-                },
-            },
-        ],
-    };
+    const productSettings = isMobile
+        ? {
+              dots: true,
+              infinite: false,
+              speed: 500,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              rows: 2,
+              slidesPerRow: 3,
+          }
+        : {
+              dots: false,
+              infinite: false,
+              speed: 500,
+              slidesToShow: 6,
+              slidesToScroll: 1,
+              arrows: true,
+              rows: 1,
+              slidesPerRow: 1,
+          };
 
-    const brandSettings = {
-        dots: false,
-        infinite: false,
-        speed: 400,
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        arrows: true,
-        rows: 1,
-        slidesPerRow: 1,
-        responsive: [
-            {
-                breakpoint: 1400,
-                settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 1,
-                    arrows: true,
-                },
-            },
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    arrows: true,
-                },
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    dots: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    rows: 2,
-                    slidesPerRow: 3,
-                    arrows: false,
-                    infinite: false,
-                },
-            },
-        ],
-    };
+    const brandSettings = isMobile
+        ? {
+              dots: true,
+              infinite: false,
+              speed: 400,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              rows: 2,
+              slidesPerRow: 3,
+          }
+        : {
+              dots: false,
+              infinite: false,
+              speed: 400,
+              slidesToShow: 6,
+              slidesToScroll: 1,
+              arrows: true,
+              rows: 1,
+              slidesPerRow: 1,
+          };
 
     return (
         <section className={styles.mainSection2}>
             {/* Product Section */}
             <div ref={productRef} className={styles.sectionProductBlock}>
                 <h3 className={styles.sectionTitle}>행복한 빙그레의 맛!</h3>
-                <Slider {...productSettings} className={styles.sliderList}>
+                <Slider key={isMobile ? "mobile" : "desktop"} {...productSettings} className={styles.sliderList}>
                     {productList.map((item, idx) => (
                         <div key={idx}>
                             <div
@@ -215,7 +194,7 @@ export default function ProductBrandSlider() {
             {/* Brand Section */}
             <div ref={brandRef} className={styles.sectionBrandBlock}>
                 <h3 className={styles.sectionTitle}>BRAND SHOP</h3>
-                <Slider {...brandSettings} className={styles.sliderList}>
+                <Slider key={isMobile ? "mobile-brand" : "desktop-brand"} {...brandSettings} className={styles.sliderList}>
                     {brandList.map((item, idx) => (
                         <div key={idx}>
                             <div
