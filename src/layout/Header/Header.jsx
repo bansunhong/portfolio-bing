@@ -146,6 +146,16 @@ export default function Header() {
         }
     }, [isDesktop]);
 
+    // 방문자 수 확인
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        fetch("https://count.cab/hit/bansunhong-portfolio-bing")
+            .then((res) => res.json())
+            .then((data) => setCount(data.value))
+            .catch((err) => console.log(err));
+    }, []);
+
     return (
         <header
             ref={headerRef}
@@ -157,6 +167,9 @@ export default function Header() {
             }}
         >
             <div className={styles.headerTop}>
+                <div style={{ paddingRight: "20px" }}>
+                    <span style={{ fontSize: "12px" }}>방문자: {count}</span>
+                </div>
                 <ul>
                     {headerTop.map((item) => (
                         <li key={item}>

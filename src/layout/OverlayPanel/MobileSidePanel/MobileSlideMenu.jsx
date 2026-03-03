@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import styles from "./MobileSidePanel.module.css";
@@ -10,6 +10,16 @@ export default function MobileSlideMenu({ isActive = false, onClose, menuData = 
         return () => (document.body.style.overflow = originalOverflow);
     }, [isActive]);
 
+    // 방문자 수 확인
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        fetch("https://count.cab/hit/bansunhong-portfolio-bing")
+            .then((res) => res.json())
+            .then((data) => setCount(data.value))
+            .catch((err) => console.log(err));
+    }, []);
+
     return (
         <>
             <div className={`${styles.mobileBackdrop} ${isActive ? styles.active : ""}`} onClick={onClose} />
@@ -19,6 +29,9 @@ export default function MobileSlideMenu({ isActive = false, onClose, menuData = 
                     <FaTimes />
                 </button>
 
+                <div style={{ paddingRight: "20px" }}>
+                    <span style={{ fontSize: "12px" }}>방문자: {count}</span>
+                </div>
                 <ul>
                     {menuData.map((item) => (
                         <li key={item.path}>
