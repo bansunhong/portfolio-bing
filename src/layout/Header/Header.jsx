@@ -4,7 +4,7 @@ import { GNB } from ".";
 import { PcOverlayPanel, MobileSidePanel } from "../OverlayPanel";
 import { FaBars, FaShareSquare } from "react-icons/fa";
 import styles from "./Header.module.css";
-import useMediaQuery from "../../../hooks/useMediaQuery";
+import useMediaQuery from "../../common/hooks/useMediaQuery";
 
 const headerTop = ["구매포털시스템", "인재채용"];
 const gnb = [

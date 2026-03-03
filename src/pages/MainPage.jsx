@@ -1,10 +1,8 @@
 import React from "react";
-import Header from "../components/layout/Header";
-import Container from "../components/layout/Container/Container";
+import Container from "../layout/Container/Container";
 import MainHero from "../features/main/MainHero";
 import ProductBrandSlider from "../features/main/ProductBrandSlider";
 import CsReport from "../features/main/CsReport";
-import Footer from "../components/layout/Footer/Footer";
 
 export default function MainPage() {
     return (

@@ -4,10 +4,10 @@ import App from "./App";
 import { HashRouter } from "react-router-dom";
 
 // 스타일 import
-import "./styles/reset.css";
-import "./styles/globals.css";
-import "./styles/variables.css";
-import "./styles/fonts.css";
+import "./common/styles/reset.css";
+import "./common/styles/globals.css";
+import "./common/styles/variables.css";
+import "./common/styles/fonts.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

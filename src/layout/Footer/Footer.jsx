@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Footer.module.css";
-import footerBlog from "../../../assets/img/footer_sns01.png";
-import footerInstagram from "../../../assets/img/footer_sns02.png";
-import footerYoutube from "../../../assets/img/footer_sns03.png";
-import footerTft from "../../../assets/img/footer_sns04.png";
+import footerBlog from "../../assets/img/footer_sns01.png";
+import footerInstagram from "../../assets/img/footer_sns02.png";
+import footerYoutube from "../../assets/img/footer_sns03.png";
+import footerTft from "../../assets/img/footer_sns04.png";
 
 export default function Footer() {
     const footerMenu = ["개인정보처리방침", "오시는길"];

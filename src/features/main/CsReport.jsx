@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import Button from "../../components/common/ui/Button";
+import Button from "../../common/ui/Button";
 import styles from "./Main.module.css";
-import useFadeUp from "../../hooks/useFadeUp";
+import useFadeUp from "../../common/hooks/useFadeUp";
 
 export default function CsReport() {
     const qnaList = [
