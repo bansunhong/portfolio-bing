@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio-bing/static/css/main.ea69c018.css",
+    "main.css": "/portfolio-bing/static/css/main.c6e2a0a6.css",
     "main.js": "/portfolio-bing/static/js/main.f5359b39.js",
     "static/media/pc_section01_4_ver6.png": "/portfolio-bing/static/media/pc_section01_4_ver6.848a4d18abc24e8001b7.png",
     "static/media/Pretendard-Bold.woff2": "/portfolio-bing/static/media/Pretendard-Bold.1f2cdf3634e962b069c8.woff2",
@@ -14,11 +14,11 @@
     "static/media/slick.ttf": "/portfolio-bing/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/portfolio-bing/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/portfolio-bing/index.html",
-    "main.ea69c018.css.map": "/portfolio-bing/static/css/main.ea69c018.css.map",
+    "main.c6e2a0a6.css.map": "/portfolio-bing/static/css/main.c6e2a0a6.css.map",
     "main.f5359b39.js.map": "/portfolio-bing/static/js/main.f5359b39.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea69c018.css",
+    "static/css/main.c6e2a0a6.css",
     "static/js/main.f5359b39.js"
   ]
 }
