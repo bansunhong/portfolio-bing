@@ -46,12 +46,14 @@ export default function ModalWithTodayHide({ isOpen, onClose, children, closeOnB
         <div style={overlayStyle} onClick={closeOnBackdrop ? () => handleClose() : undefined}>
             <div style={modalStyle} onClick={(e) => e.stopPropagation()}>
                 <button style={closeButtonStyle} onClick={() => handleClose()}>
-                    <FaTimes />
+                    <FaTimes style={buttonColorStyle} />
                 </button>
                 {children}
 
                 <div style={{ marginTop: "16px", display: "flex", justifyContent: "flex-end" }}>
-                    <button onClick={() => handleClose(true)}>오늘 하루 안 보기</button>
+                    <button onClick={() => handleClose(true)} style={buttonColorStyle}>
+                        오늘 하루 안 보기
+                    </button>
                 </div>
             </div>
         </div>,
@@ -90,4 +92,8 @@ const closeButtonStyle = {
     background: "transparent",
     fontSize: "18px",
     cursor: "pointer",
+};
+
+const buttonColorStyle = {
+    color: "#000",
 };
