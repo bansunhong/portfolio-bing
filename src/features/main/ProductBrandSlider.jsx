@@ -112,7 +112,7 @@ export default function ProductBrandSlider() {
                     }
                 }
             },
-            { threshold: 0.85 },
+            { threshold: 0.2 },
         );
         if (productRef.current) observer.observe(productRef.current);
         if (brandRef.current) observer.observe(brandRef.current);
