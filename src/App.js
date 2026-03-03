@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
 // 공통 레이아웃
@@ -14,6 +14,19 @@ import Button from "./common/ui/Button";
 
 export default function App() {
     const [isOpen, setIsOpen] = useState(true);
+
+    // iOS 100vh 문제 해결
+    useEffect(() => {
+        const setVh = () => {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty("--vh", `${vh}px`);
+        };
+
+        setVh();
+        window.addEventListener("resize", setVh);
+
+        return () => window.removeEventListener("resize", setVh);
+    }, []);
 
     return (
         <>
